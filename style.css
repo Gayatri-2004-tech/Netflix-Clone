@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("Assets/images/bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.main .box {
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding-top: 15px;
+}
+
+nav span img {
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    position: relative;
+    gap: 24px;
+}
+
+.hero> :nth-child(1) {
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 530;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn {
+    padding: 7px 18px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgba(23, 23, 23, 0.21);
+    cursor: pointer;
+}
+
+.btn-lang {
+    padding-right: 50px;
+}
+
+
+.btn-red-sn {
+    background-color: red;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-red {
+    background-color: red;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 9px 14px;
+}
+
+.main input {
+    padding: 14px 200px 14px 14px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: rgb(240, 237, 237);
+    background-color: rgba(23, 23, 23, 0.5);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    margin: 0 5px;
+}
+
+.bodyend input {
+    padding: 14px 250px 14px 14px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: rgb(240, 237, 237);
+    background-color: rgba(23, 23, 23, 0.5);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    margin: 0 5px;
+}
+
+
+
+
+.hero-divider {
+    width: 100%;
+    height: 100px;
+    /* Adjust height for curve intensity */
+    background: linear-gradient(90deg, transparent, red 20%, red 80%, transparent);
+
+    /* Creates the actual curved shape at the bottom */
+    clip-path: ellipse(60% 100% at bottom);
+
+    /* Adds the fading glow effect */
+    mask: radial-gradient(62% 95% at bottom, transparent 98%, black);
+
+    /* margin-top: -5px; */
+    /* Pulls it up to overlap the hero section slightly */
+    z-index: 10;
+    position: relative;
+}
+
+.shadow {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, transparent, red 20%, red 80%, transparent);
+    clip-path: ellipse(60% 100% at bottom);
+    filter: blur(15px);
+}
+
+
+
+.trendings {
+    height: 300px;
+    max-width: 75vw;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.trendings h2 {
+    font-size: 1.45em;
+    font-weight: 550;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    padding: 0 10px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+}
+
+.flex::-webkit-scrollbar {
+    display: none;
+}
+
+.trendings .flex .posters img {
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: posterHover 2s ease-in-out;
+    ;
+}
+
+.trendings .flex .posters:hover {
+    animation: posterHover 0.5s ease;
+}
+
+.posters:hover {
+    transform: scale(1.1);
+}
+
+.more {
+    height: auto;
+    max-width: 75vw;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.more h2 {
+    font-size: 1.45em;
+    font-weight: 550;
+    margin: 0 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.more .grid .sections {
+    background-color: #392e3c74;
+    padding: 18px;
+    margin-top: 10px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.more .grid .sections h2 {
+    padding-top: 12px;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+.more .grid .sections p {
+    font-size: 0.8em;
+    padding-top: 15px;
+    color: #FFFFFFB3;
+}
+
+.more .grid .sections img {
+    height: 65px;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+
+.FAQS {
+    height: auto;
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.FAQS h2 {
+    font-size: 1.45em;
+    font-weight: 550;
+    margin: 0px 5px;
+}
+
+.FAQS .questions {
+    height: 65px;
+    background-color: rgba(45, 45, 45, 1);
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.FAQS .questions:hover {
+    background-color: #414141;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.FAQS .questions p {
+    font-size: 1.2em;
+    padding: 0px 20px;
+}
+
+.FAQS .questions div {
+    font-size: 2.2em;
+    font-weight: 200;
+    padding: 0px 20px;
+}
+
+.bodyend {
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.bodyend p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bodyend input {
+    padding: 14px 300px 14px 14px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: rgb(240, 237, 237);
+    background-color: rgba(23, 23, 23, 0.5);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+footer {
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 80px;
+}
+
+footer p,
+a {
+    color: #FFFFFFB3;
+}
+
+footer a {
+    margin-left: 5px;
+}
+
+.anchors {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    font-size: 15px;
+}
+
+footer button {
+    margin-top: 65px;
+}
+
+footer div p {
+    margin-top: 35px;
+}
+
+footer .protection p {
+    font-size: 0.8em;
+    color: #b5b2b2b3;
+    padding-bottom: 100px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .more .grid .sections {
+        height: 180px;
+    }
+
+    footer .anchors {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+
+    .main,
+    .main .box {
+        height: 80vh;
+    }
+
+    nav {
+        width: 90vw;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .more .grid .sections {
+        height: 180px;
+    }
+
+    footer .anchors {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 90vw;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    footer .anchors {
+        grid-template-columns: 1fr;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .bodyend input {
+        padding: 14px 250px 14px 14px;
+    }
+}
